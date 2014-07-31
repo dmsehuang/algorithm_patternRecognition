@@ -1,1 +1,1 @@
-This project is the assignment for Princeton Algorithm Part I, dealing with sorting algorithms.
+This project is the assignment for Princeton Algorithm Part I, dealing with sorting algorithms. The points object has two compare methods, one is compared by the x & y, the other is compared by the slope with a certain point.

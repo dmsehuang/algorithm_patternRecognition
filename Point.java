@@ -28,14 +28,14 @@ public class Point implements Comparable<Point> {
     }
     
     private class SlopeOrder implements Comparator<Point> {
-        public int compare (Point p1, Point p2) {
+        public int compare(Point p1, Point p2) {
             double s1 = slopeTo(p1);
             double s2 = slopeTo(p2);
             if (s1 == s2) {
                 return 0;
-            }else if (s1 < s2) {
+            } else if (s1 < s2) {
                 return -1;
-            }else {
+            } else {
                 return 1;
             }
         }
@@ -63,9 +63,9 @@ public class Point implements Comparable<Point> {
         if (this.y == that.y) return +0.0; // horizontal line segment has positive zero slope
         
         // normal case
-        double diff_y = (double)(this.y - that.y);
-        double diff_x = (double)(this.x - that.x);
-        return diff_y/diff_x;
+        double diffY = (double) (this.y - that.y);
+        double diffX = (double) (this.x - that.x);
+        return diffY/diffX;
     }
 
     // is this point lexicographically smaller than that one?
@@ -74,7 +74,7 @@ public class Point implements Comparable<Point> {
         /* YOUR CODE HERE */
         if (this.y == that.y) {
             return this.x - that.x;
-        }else {
+        } else {
             return this.y - that.y;
         }
     }
@@ -87,6 +87,23 @@ public class Point implements Comparable<Point> {
 
     // unit test
     public static void main(String[] args) {
-        /* YOUR CODE HERE */
+//        // rescale coordinates and turn on animation mode
+//        StdDraw.setXscale(-10, 10);
+//        StdDraw.setYscale(-10, 10);
+//        StdDraw.show(0);
+//        StdDraw.setPenRadius(0.01);  // make the points a bit larger
+//
+//        /* YOUR CODE HERE */
+//        Point p0 = new Point(0, 0);
+//        Point p1 = new Point(1, 1);
+//        Point p2 = new Point(2, 8);
+//        Point p3 = new Point(-3, -9);
+//        p1.drawTo(p2);
+//        p0.drawTo(p1);
+//        p0.drawTo(p2);
+//        p3.draw();
+//        
+//     // display to screen all at once
+//        StdDraw.show(0);
     }
 }
